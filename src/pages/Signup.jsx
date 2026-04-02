@@ -77,9 +77,9 @@ export default function Signup() {
       </div>
 
       {/* Right side form */}
-      <div className="flex-1 flex flex-col justify-center py-6 px-8 md:p-12 lg:p-24 bg-bg-base relative overflow-y-auto">
-        <div className="absolute top-8 left-8 md:hidden">
-          <span className="text-2xl font-heading font-bold tracking-tight text-white">Pulse.</span>
+      <div className="flex-1 flex flex-col items-center justify-center py-12 px-6 md:p-12 lg:p-24 bg-bg-base relative min-h-screen">
+        <div className="w-full max-w-sm mx-auto mb-10 md:hidden">
+          <span className="text-2xl font-heading font-bold tracking-tight text-white px-2 border-l-4 border-accent">Pulse.</span>
         </div>
 
         <motion.div 
@@ -88,12 +88,12 @@ export default function Signup() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="mb-8">
-            <h2 className="text-3xl font-heading font-bold mb-3 tracking-tight">Create your account</h2>
-            <p className="text-text-secondary font-medium tracking-wide">Join the movement today.</p>
+          <div className="mb-10">
+            <h2 className="text-4xl font-heading font-bold mb-3 tracking-tight text-white leading-tight">Create your account</h2>
+            <p className="text-text-secondary font-medium tracking-wide">Join the high-performance movement.</p>
           </div>
 
-          <form onSubmit={handleSignup} className="space-y-4">
+          <form onSubmit={handleSignup} className="space-y-5">
             <Input
               label="Full Name"
               type="text"

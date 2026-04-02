@@ -35,12 +35,22 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-bg-base text-text-primary p-4 relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-bg-base text-text-primary p-4 relative overflow-hidden">
       
       {/* Premium Cinematic Background Elements */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute top-8 left-8">
+      
+      <div className="w-full max-w-[480px] mb-8 md:hidden text-center">
+        <span className="text-3xl font-heading font-bold tracking-tight text-white inline-flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-accent text-bg-base flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          Pulse.
+        </span>
+      </div>
+
+      <div className="absolute top-8 left-8 hidden md:block">
         <span className="text-3xl font-heading font-bold tracking-tight text-white flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-accent text-bg-base flex items-center justify-center">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>

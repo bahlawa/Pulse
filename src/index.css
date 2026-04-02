@@ -23,7 +23,8 @@
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: var(--font-body);
@@ -118,7 +119,18 @@ input::-webkit-inner-spin-button {
 
 /* Hide Spinners in Firefox */
 input[type=number] {
+  appearance: textfield;
   -moz-appearance: textfield;
+}
+
+/* Fix Autofill background in dark mode */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-bg-base) inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /* Firefox */
