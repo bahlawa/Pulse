@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import { Activity, Apple, Dumbbell, User } from 'lucide-react';
+import { Activity, Apple, Dumbbell, User, LineChart } from 'lucide-react';
 
 const mobileNavItems = [
   { icon: Activity, label: 'Dashboard', path: '/dashboard' },
   { icon: Apple, label: 'Meals', path: '/log-meal' },
   { icon: Dumbbell, label: 'Workouts', path: '/log-workout' },
+  { icon: LineChart, label: 'Progress', path: '/progress' },
   { icon: User, label: 'Profile', path: '/profile' }
 ];
 
