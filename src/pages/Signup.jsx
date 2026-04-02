@@ -54,7 +54,7 @@ export default function Signup() {
       }
     } catch (err) {
       const msg = err.message === 'Failed to fetch' 
-        ? 'Could not connect to Supabase. Check your .env file and restart the server.' 
+        ? 'Connection error: Please check your internet connection and try again.' 
         : err.message || 'Failed to sign up';
       setError(msg);
       setLoading(false);

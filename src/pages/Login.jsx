@@ -29,7 +29,7 @@ export default function Login() {
       navigate('/dashboard');
     } catch (err) {
       const msg = err.message === 'Failed to fetch' 
-        ? 'Could not connect to Supabase. Check your .env file and restart the server.' 
+        ? 'Connection error: Please check your internet connection and try again.' 
         : err.message || 'Failed to login';
       setError(msg);
     } finally {
@@ -72,7 +72,7 @@ export default function Login() {
           <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
           
           <div className="mb-10">
-            <h2 className="text-[2.5rem] font-heading font-bold mb-2 tracking-tight text-white">Sign In</h2>
+            <h2 className="text-[2.5rem] font-heading font-bold mb-2 tracking-tight text-white">Log In</h2>
             <p className="text-text-secondary font-medium tracking-wide">Enter your details to access your dashboard.</p>
           </div>
 
@@ -102,7 +102,7 @@ export default function Login() {
             )}
 
             <Button type="submit" fullWidth disabled={loading} className="mt-8 text-bg-base text-lg py-7">
-              {loading ? 'Logging in...' : 'Sign in'}
+              {loading ? 'Logging in...' : 'Log In'}
             </Button>
           </form>
 
