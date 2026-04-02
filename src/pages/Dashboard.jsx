@@ -46,8 +46,8 @@ export default function Dashboard() {
         {[
           { icon: Zap, label: 'Active Energy', value: `${burnedCalories}`, unit: 'kcal', color: 'text-orange-500', bg: 'bg-orange-500/10' },
           { icon: Droplets, label: 'Hydration', value: `${water}`, unit: 'glasses', color: 'text-blue-500', bg: 'bg-blue-500/10', onClick: () => setWater(w => w + 1) },
-          { icon: Heart, label: 'Heart Rate', value: '72', unit: 'bpm', color: 'text-red-500', bg: 'bg-red-500/10' },
-          { icon: Wind, label: 'VO2 Max', value: '48.5', unit: 'ml/kg', color: 'text-purple-500', bg: 'bg-purple-500/10' }
+          { icon: Heart, label: 'Heart Rate', value: '--', unit: 'bpm', color: 'text-red-500', bg: 'bg-red-500/10' },
+          { icon: Wind, label: 'VO2 Max', value: '--', unit: 'ml/kg', color: 'text-purple-500', bg: 'bg-purple-500/10' }
         ].map((stat, i) => (
           <Card key={i} animate index={i} className="p-4 flex flex-col gap-3 hover:border-accent/20 transition-all cursor-pointer group" onClick={stat.onClick}>
             <div className={`w-10 h-10 rounded-2xl ${stat.bg} flex items-center justify-center ${stat.color} group-hover:scale-110 transition-transform`}>
@@ -150,7 +150,7 @@ export default function Dashboard() {
                 <h3 className="text-[10px] font-black uppercase tracking-widest text-text-muted mb-2">Consistency</h3>
                 <div className="text-4xl font-black text-accent italic tracking-tighter flex items-center gap-2">
                   <Trophy className="h-6 w-6" />
-                  12 <span className="text-sm font-black text-white uppercase tracking-widest">Days</span>
+                  -- <span className="text-sm font-black text-white uppercase tracking-widest">Days</span>
                 </div>
               </div>
               <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">

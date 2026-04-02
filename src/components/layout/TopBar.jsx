@@ -36,7 +36,7 @@ export function TopBar() {
           </div>
           <div className="flex flex-col justify-center">
             <span className="text-sm font-bold text-white leading-tight">{userName}</span>
-            <span className="text-[10px] text-text-muted uppercase tracking-wider font-bold">Admin</span>
+            <span className="text-[10px] text-text-muted uppercase tracking-wider font-bold">Athlete</span>
           </div>
         </div>
       </div>

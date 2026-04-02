@@ -16,13 +16,7 @@ export default function Progress() {
   const { profile } = useProfile();
   const { workouts } = useWorkouts();
   
-  // Weights Data Processing
-  const demoWeightLogs = Array.from({ length: 30 }, (_, i) => ({
-    id: `demo-weight-${i}`,
-    weight_kg: 82.5 - (i * 0.1) + (Math.sin(i) * 0.5),
-    logged_at: new Date(Date.now() - (29 - i) * 86400000).toISOString().split('T')[0]
-  }));
-
+  // Real Weights Data only
   const [weightLogs, setWeightLogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [newWeight, setNewWeight] = useState('');
@@ -49,7 +43,7 @@ export default function Progress() {
         .limit(30);
       
       const realData = data || [];
-      setWeightLogs([...demoWeightLogs, ...realData]);
+      setWeightLogs(realData);
       setLoading(false);
     }
     fetchWeightLogs();
