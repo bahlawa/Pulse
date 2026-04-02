@@ -28,7 +28,10 @@ export default function Login() {
       if (error) throw error;
       navigate('/dashboard');
     } catch (err) {
-      setError(err.message || 'Failed to login');
+      const msg = err.message === 'Failed to fetch' 
+        ? 'Could not connect to Supabase. Check your .env file and restart the server.' 
+        : err.message || 'Failed to login';
+      setError(msg);
     } finally {
       setLoading(false);
     }

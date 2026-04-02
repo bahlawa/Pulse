@@ -53,7 +53,10 @@ export default function Signup() {
         setError('Signup failed.');
       }
     } catch (err) {
-      setError(err.message || 'Failed to sign up');
+      const msg = err.message === 'Failed to fetch' 
+        ? 'Could not connect to Supabase. Check your .env file and restart the server.' 
+        : err.message || 'Failed to sign up';
+      setError(msg);
       setLoading(false);
     } finally {
       // Don't set loading false here if navigating
