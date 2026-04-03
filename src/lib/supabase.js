@@ -3,8 +3,11 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
 const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
-if (!supabaseUrl || !supabaseKey) {
-  console.warn("Pulse Error: Supabase URL or Anon Key is missing. Login/Signup will 'Failed to fetch'. Check your .env file and restart the dev server.")
+if (!supabaseUrl) console.error("DEBUG: VITE_SUPABASE_URL is missing!")
+if (!supabaseKey) console.error("DEBUG: VITE_SUPABASE_ANON_KEY is missing!")
+
+if (supabaseUrl && supabaseUrl.includes('placeholder')) {
+  console.error("DEBUG: Using placeholder URL. Real keys are not being injected correctly.")
 }
 
 export const supabase = createClient(
