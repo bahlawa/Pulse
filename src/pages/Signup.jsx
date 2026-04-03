@@ -81,8 +81,17 @@ export default function Signup() {
 
       {/* Right side form */}
       <div className="flex-1 flex flex-col items-center justify-center py-12 px-6 md:p-12 lg:p-24 bg-bg-base relative min-h-screen">
-        <div className="w-full max-w-sm mx-auto mb-10 md:hidden">
-          <span className="text-2xl font-heading font-bold tracking-tight text-white px-2 border-l-4 border-accent">Pulse.</span>
+        <div className="w-full max-w-sm mx-auto mb-10 md:hidden flex justify-between items-center">
+          <span className="text-xl font-heading font-bold tracking-tight text-white px-2 border-l-4 border-accent">Pulse.</span>
+          <span className="text-[10px] font-black uppercase tracking-widest text-text-muted italic">Forge yourself</span>
+        </div>
+
+        {/* Mobile Motivation */}
+        <div className="w-full max-w-sm mx-auto mb-12 md:hidden">
+          <h1 className="text-5xl font-heading font-black tracking-tighter leading-[0.8] text-white">
+            FORGE<br/>YOURSELF.
+          </h1>
+          <p className="text-[10px] font-black uppercase tracking-[0.4em] text-accent mt-3">No excuses.</p>
         </div>
 
         <motion.div 
